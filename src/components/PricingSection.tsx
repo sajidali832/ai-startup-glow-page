@@ -1,7 +1,26 @@
 import { Check } from 'lucide-react';
+import { useState } from 'react';
 import CountdownTimer from './CountdownTimer';
+import BannerAd from './BannerAd';
+import InterstitialAd from './InterstitialAd';
 
 const PricingSection = () => {
+  const [showInterstitialAd, setShowInterstitialAd] = useState(false);
+
+  const handleAccessClick = (e: React.MouseEvent) => {
+    e.preventDefault();
+    setShowInterstitialAd(true);
+  };
+
+  const handleAdComplete = () => {
+    localStorage.setItem('courseAccessed', 'true');
+    localStorage.setItem('courseAccessTime', Date.now().toString());
+    
+    // Redirect to the course
+    window.open('https://drive.google.com/file/d/1jWn0sOP5bREXUH3G8lpyJhVEvn2D573V/view?usp=drivesdk', '_blank');
+    setShowInterstitialAd(false);
+  };
+
   return (
     <section className="py-20 px-4">
       <div className="container mx-auto max-w-4xl">
@@ -9,6 +28,11 @@ const PricingSection = () => {
         {/* Countdown Timer */}
         <div className="mb-16 animate-fade-in-up">
           <CountdownTimer />
+        </div>
+        
+        {/* Banner Ad */}
+        <div className="mb-8 animate-fade-in-up">
+          <BannerAd className="my-6" />
         </div>
         
         {/* Pricing Card */}
@@ -61,18 +85,12 @@ const PricingSection = () => {
               
               {/* CTA Button */}
               <div className="space-y-4">
-                <a 
-                  href="https://drive.google.com/file/d/1jWn0sOP5bREXUH3G8lpyJhVEvn2D573V/view?usp=drivesdk" 
-                  target="_blank" 
-                  rel="noopener noreferrer"
+                <button
+                  onClick={handleAccessClick}
                   className="block w-full bg-gradient-to-r from-ai-green to-ai-cyan text-white font-bold text-lg md:text-xl py-4 px-6 md:px-8 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg animate-pulse-glow text-center"
-                  onClick={() => {
-                    localStorage.setItem('courseAccessed', 'true');
-                    localStorage.setItem('courseAccessTime', Date.now().toString());
-                  }}
                 >
                   🎉 Get FREE Access Now - Download PDF!
-                </a>
+                </button>
                 
                 <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 text-xs md:text-sm text-gray-400">
                   <span>🎉 100% Free</span>
@@ -102,7 +120,19 @@ const PricingSection = () => {
             </div>
           </div>
         </div>
+        
+        {/* Banner Ad */}
+        <div className="mt-12 animate-fade-in-up">
+          <BannerAd className="my-6" />
+        </div>
       </div>
+      
+      {/* Interstitial Ad */}
+      <InterstitialAd 
+        isOpen={showInterstitialAd}
+        onClose={() => setShowInterstitialAd(false)}
+        onComplete={handleAdComplete}
+      />
     </section>
   );
 };
