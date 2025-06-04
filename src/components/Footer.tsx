@@ -83,11 +83,12 @@ const Footer = () => {
           </div>
           
           <div className="text-center md:text-right text-sm text-gray-400">
-            <p>© 2025 AI Startup Mastery Course. Made with ❤️ in Pakistan</p>
+            <p>© 2025 AI Startup Course by Mr. Sajid. Made with ❤️ in Pakistan</p>
+            <p className="text-ai-cyan text-xs mt-1">"Quality over money - Empowering entrepreneurs"</p>
             <div className="flex flex-wrap justify-center md:justify-end space-x-4 mt-2">
               <a href="#" className="hover:text-ai-cyan transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-ai-cyan transition-colors">Terms of Service</a>
-              <a href="#" className="hover:text-ai-cyan transition-colors">Refund Policy</a>
+              <a href="#" className="hover:text-ai-cyan transition-colors">Share with Friends</a>
             </div>
           </div>
         </div>
@@ -99,11 +100,21 @@ const Footer = () => {
               Ready to Build Your AI Empire? 🚀
             </h3>
             <p className="text-gray-300 mb-6">
-              Join 12,000+ Pakistani entrepreneurs who are already building the future with AI
+              Join 12,000+ Pakistani entrepreneurs who are already building the future with AI. 
+              FREE for 3 days only - Share with others!
             </p>
-            <button className="bg-gradient-to-r from-ai-green to-ai-cyan text-white font-bold text-lg px-8 py-4 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg">
-              Start Your AI Journey Today - PKR 539
-            </button>
+            <a 
+              href="https://drive.google.com/file/d/1jWn0sOP5bREXUH3G8lpyJhVEvn2D573V/view?usp=drivesdk" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="inline-block bg-gradient-to-r from-ai-green to-ai-cyan text-white font-bold text-lg px-8 py-4 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg"
+              onClick={() => {
+                localStorage.setItem('courseAccessed', 'true');
+                localStorage.setItem('courseAccessTime', Date.now().toString());
+              }}
+            >
+              🎉 Get FREE Access Now!
+            </a>
           </div>
         </div>
       </div>

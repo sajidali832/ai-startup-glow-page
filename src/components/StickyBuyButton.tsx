@@ -25,7 +25,10 @@ const StickyBuyButton = () => {
         target="_blank" 
         rel="noopener noreferrer"
         className="bg-gradient-to-r from-ai-green to-ai-cyan text-white font-bold px-4 md:px-8 py-3 md:py-4 rounded-full shadow-2xl hover:scale-105 transition-all duration-300 animate-pulse-glow flex items-center justify-center space-x-2 md:space-x-3 w-full md:w-auto"
-        onClick={() => localStorage.setItem('courseAccessed', 'true')}
+        onClick={() => {
+          localStorage.setItem('courseAccessed', 'true');
+          localStorage.setItem('courseAccessTime', Date.now().toString());
+        }}
       >
         <span className="text-sm md:text-lg">🎉 Get FREE Access</span>
         <div className="bg-ai-orange text-ai-navy px-2 md:px-3 py-1 rounded-full text-xs md:text-sm font-bold whitespace-nowrap">

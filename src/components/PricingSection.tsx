@@ -66,7 +66,10 @@ const PricingSection = () => {
                   target="_blank" 
                   rel="noopener noreferrer"
                   className="block w-full bg-gradient-to-r from-ai-green to-ai-cyan text-white font-bold text-lg md:text-xl py-4 px-6 md:px-8 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg animate-pulse-glow text-center"
-                  onClick={() => localStorage.setItem('courseAccessed', 'true')}
+                  onClick={() => {
+                    localStorage.setItem('courseAccessed', 'true');
+                    localStorage.setItem('courseAccessTime', Date.now().toString());
+                  }}
                 >
                   🎉 Get FREE Access Now - Download PDF!
                 </a>
@@ -78,9 +81,17 @@ const PricingSection = () => {
                 </div>
               </div>
               
-              {/* Trust Badges */}
-              <div className="pt-6 border-t border-white/10">
-                <p className="text-ai-cyan mb-4 font-semibold">Free for Everyone - Share with Others!</p>
+              {/* Creator Information */}
+              <div className="pt-6 border-t border-white/10 space-y-4">
+                <div className="text-center">
+                  <p className="text-ai-cyan mb-2 font-semibold">Created by Mr. Sajid</p>
+                  <p className="text-gray-300 text-sm px-4">
+                    "Quality over money - I believe in empowering people with knowledge. 
+                    This course is my gift to aspiring entrepreneurs."
+                  </p>
+                </div>
+                
+                <p className="text-ai-cyan font-semibold">Free for Everyone - Share with Others!</p>
                 <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
                   <span>✅ Completely Free</span>
                   <span>✅ Instant Download</span>
