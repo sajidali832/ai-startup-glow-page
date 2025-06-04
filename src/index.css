@@ -2,6 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -35,19 +37,12 @@
     --radius: 0.5rem;
 
     --sidebar-background: 0 0% 98%;
-
     --sidebar-foreground: 240 5.3% 26.1%;
-
     --sidebar-primary: 240 5.9% 10%;
-
     --sidebar-primary-foreground: 0 0% 98%;
-
     --sidebar-accent: 240 4.8% 95.9%;
-
     --sidebar-accent-foreground: 240 5.9% 10%;
-
     --sidebar-border: 220 13% 91%;
-
     --sidebar-ring: 217.2 91.2% 59.8%;
   }
 
@@ -96,6 +91,65 @@
   }
 
   body {
-    @apply bg-background text-foreground;
+    @apply bg-ai-navy text-white font-sans;
+    font-family: 'Inter', sans-serif;
   }
+
+  .font-heading {
+    font-family: 'Space Grotesk', sans-serif;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-gradient-to-r from-ai-cyan via-ai-blue to-ai-purple bg-clip-text text-transparent;
+  }
+  
+  .bg-gradient-ai {
+    background: linear-gradient(135deg, #1e3a8a 0%, #7c3aed 50%, #ec4899 100%);
+  }
+  
+  .glass-effect {
+    @apply bg-white/10 backdrop-blur-lg border border-white/20;
+  }
+  
+  .hover-lift {
+    @apply transition-transform duration-300 hover:transform hover:-translate-y-2;
+  }
+  
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  @apply bg-ai-navy;
+}
+
+::-webkit-scrollbar-thumb {
+  @apply bg-ai-blue rounded-lg;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  @apply bg-ai-cyan;
+}
+
+/* Circuit board animation */
+.circuit-bg {
+  background-image: 
+    radial-gradient(circle at 25% 25%, #06b6d4 2px, transparent 2px),
+    radial-gradient(circle at 75% 75%, #7c3aed 2px, transparent 2px),
+    radial-gradient(circle at 25% 75%, #ec4899 1px, transparent 1px);
+  background-size: 50px 50px, 80px 80px, 40px 40px;
+  animation: circuit-flow 20s linear infinite;
+}
+
+@keyframes circuit-flow {
+  0% { background-position: 0 0, 0 0, 0 0; }
+  100% { background-position: 50px 50px, 80px 80px, 40px 40px; }
 }
