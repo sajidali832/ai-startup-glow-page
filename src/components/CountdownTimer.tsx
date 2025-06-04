@@ -53,7 +53,7 @@ const CountdownTimer = () => {
   return (
     <div className="flex flex-col items-center space-y-3 px-2">
       <div className="bg-ai-orange text-ai-navy px-3 py-1.5 md:px-6 md:py-2 rounded-full font-bold text-xs md:text-base uppercase tracking-wide animate-bounce max-w-full text-center">
-        ⚡ 3-Day Flash Sale! ⚡
+        🎉 FREE FOR 3 DAYS! 🎉
       </div>
       
       <div className="flex space-x-1 md:space-x-4 w-full justify-center">
@@ -64,7 +64,7 @@ const CountdownTimer = () => {
       </div>
       
       <p className="text-ai-cyan text-xs md:text-base font-medium text-center px-2">
-        Hurry! Offer expires soon
+        Hurry! Get your FREE access now
       </p>
     </div>
   );

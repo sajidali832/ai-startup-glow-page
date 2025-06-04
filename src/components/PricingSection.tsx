@@ -18,10 +18,10 @@ const PricingSection = () => {
           
           <div className="relative glass-effect rounded-3xl p-8 md:p-12 text-center">
             
-            {/* Discount Badge */}
+            {/* Free Badge */}
             <div className="absolute -top-4 md:-top-6 left-1/2 transform -translate-x-1/2">
-              <div className="bg-gradient-to-r from-ai-orange to-ai-pink text-white px-4 py-2 md:px-8 md:py-3 rounded-full font-bold text-sm md:text-lg shadow-lg animate-bounce">
-                🔥 40% OFF
+              <div className="bg-gradient-to-r from-ai-green to-ai-cyan text-white px-4 py-2 md:px-8 md:py-3 rounded-full font-bold text-sm md:text-lg shadow-lg animate-bounce">
+                🎉 100% FREE
               </div>
             </div>
             
@@ -31,13 +31,13 @@ const PricingSection = () => {
                 Build AI Startup Company in 2025
               </h2>
               
-              {/* Pricing */}
+              {/* Free Pricing */}
               <div className="space-y-3 md:space-y-4">
-                <div className="flex flex-col md:flex-row items-center justify-center md:space-x-4 space-y-2 md:space-y-0">
+                <div className="flex flex-col items-center justify-center space-y-2">
                   <span className="text-xl md:text-3xl text-gray-400 line-through">PKR 899</span>
-                  <span className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-ai-cyan to-ai-green bg-clip-text text-transparent">PKR 539</span>
+                  <span className="text-4xl md:text-6xl font-bold bg-gradient-to-r from-ai-green to-ai-cyan bg-clip-text text-transparent">FREE</span>
                 </div>
-                <p className="text-ai-cyan font-semibold text-sm md:text-base px-2">Limited Time Offer - Save 360 PKR!</p>
+                <p className="text-ai-green font-semibold text-sm md:text-base px-2">🎉 Everything FREE for 3 Days! Share with others!</p>
               </div>
               
               {/* Features */}
@@ -61,25 +61,31 @@ const PricingSection = () => {
               
               {/* CTA Button */}
               <div className="space-y-4">
-                <button className="w-full bg-gradient-to-r from-ai-green to-ai-cyan text-white font-bold text-lg md:text-xl py-4 px-6 md:px-8 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg animate-pulse-glow">
-                  🚀 Enroll Now - Start Building Your AI Empire!
-                </button>
+                <a 
+                  href="https://drive.google.com/file/d/1jWn0sOP5bREXUH3G8lpyJhVEvn2D573V/view?usp=drivesdk" 
+                  target="_blank" 
+                  rel="noopener noreferrer"
+                  className="block w-full bg-gradient-to-r from-ai-green to-ai-cyan text-white font-bold text-lg md:text-xl py-4 px-6 md:px-8 rounded-xl hover:scale-105 transition-all duration-300 shadow-lg animate-pulse-glow text-center"
+                  onClick={() => localStorage.setItem('courseAccessed', 'true')}
+                >
+                  🎉 Get FREE Access Now - Download PDF!
+                </a>
                 
                 <div className="flex flex-wrap items-center justify-center gap-2 md:gap-4 text-xs md:text-sm text-gray-400">
-                  <span>🔒 Secure Payment</span>
-                  <span>💳 Easy Installments</span>
-                  <span>📱 Mobile Friendly</span>
+                  <span>🎉 100% Free</span>
+                  <span>📱 Instant Access</span>
+                  <span>📝 PDF Download</span>
                 </div>
               </div>
               
               {/* Trust Badges */}
               <div className="pt-6 border-t border-white/10">
-                <p className="text-ai-cyan mb-4 font-semibold">Trusted by Pakistani Entrepreneurs</p>
+                <p className="text-ai-cyan mb-4 font-semibold">Free for Everyone - Share with Others!</p>
                 <div className="flex flex-wrap justify-center gap-4 text-sm text-gray-400">
-                  <span>✅ 30-Day Guarantee</span>
-                  <span>✅ Instant Access</span>
-                  <span>✅ Pakistani Payment Methods</span>
-                  <span>✅ 24/7 Support</span>
+                  <span>✅ Completely Free</span>
+                  <span>✅ Instant Download</span>
+                  <span>✅ No Registration Required</span>
+                  <span>✅ Share with Friends</span>
                 </div>
               </div>
             </div>

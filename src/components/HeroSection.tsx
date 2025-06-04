@@ -23,8 +23,8 @@ const HeroSection = () => {
                 <span className="text-ai-orange">2025</span>
               </h1>
               
-              <div className="inline-block bg-gradient-to-r from-ai-orange to-ai-pink text-white px-6 py-3 rounded-full font-bold text-lg md:text-xl animate-pulse-glow">
-                FULL COURSE
+              <div className="inline-block bg-gradient-to-r from-ai-green to-ai-cyan text-white px-6 py-3 rounded-full font-bold text-lg md:text-xl animate-pulse-glow">
+                FREE FOR 3 DAYS
               </div>
             </div>
             

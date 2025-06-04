@@ -4,6 +4,7 @@ import CourseModules from '../components/CourseModules';
 import TestimonialsSection from '../components/TestimonialsSection';
 import StickyBuyButton from '../components/StickyBuyButton';
 import Footer from '../components/Footer';
+import SuccessMessage from '../components/SuccessMessage';
 
 const Index = () => {
   return (
@@ -25,6 +26,9 @@ const Index = () => {
       
       {/* Sticky Buy Button */}
       <StickyBuyButton />
+      
+      {/* Success Message */}
+      <SuccessMessage />
     </div>
   );
 };
