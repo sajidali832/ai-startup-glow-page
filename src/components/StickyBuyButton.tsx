@@ -4,6 +4,8 @@ import InterstitialAd from './InterstitialAd';
 const StickyBuyButton = () => {
   const [isVisible, setIsVisible] = useState(false);
   const [showInterstitialAd, setShowInterstitialAd] = useState(false);
+  const [adsViewed, setAdsViewed] = useState(0);
+  const requiredAds = 3;
 
   useEffect(() => {
     const toggleVisibility = () => {
@@ -23,6 +25,19 @@ const StickyBuyButton = () => {
     setShowInterstitialAd(true);
   };
 
+  const handleAdClose = () => {
+    setShowInterstitialAd(false);
+    const newAdsViewed = adsViewed + 1;
+    setAdsViewed(newAdsViewed);
+    
+    if (newAdsViewed < requiredAds) {
+      // Show next ad after a short delay
+      setTimeout(() => {
+        setShowInterstitialAd(true);
+      }, 1000);
+    }
+  };
+
   const handleAdComplete = () => {
     localStorage.setItem('courseAccessed', 'true');
     localStorage.setItem('courseAccessTime', Date.now().toString());
@@ -30,6 +45,7 @@ const StickyBuyButton = () => {
     // Redirect to the course
     window.open('https://drive.google.com/file/d/1jWn0sOP5bREXUH3G8lpyJhVEvn2D573V/view?usp=drivesdk', '_blank');
     setShowInterstitialAd(false);
+    setAdsViewed(0); // Reset for next time
   };
 
   if (!isVisible) return null;
@@ -48,8 +64,10 @@ const StickyBuyButton = () => {
       {/* Interstitial Ad */}
       <InterstitialAd 
         isOpen={showInterstitialAd}
-        onClose={() => setShowInterstitialAd(false)}
+        onClose={handleAdClose}
         onComplete={handleAdComplete}
+        adsViewed={adsViewed}
+        requiredAds={requiredAds}
       />
     </>
   );

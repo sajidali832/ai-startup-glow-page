@@ -8,31 +8,24 @@ const BannerAd = ({ className = "" }: BannerAdProps) => {
   const adRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    // Create script elements
-    const configScript = document.createElement('script');
-    configScript.type = 'text/javascript';
-    configScript.innerHTML = `
-      atOptions = {
-        'key' : '221cb822c978e0f9b51f9b5e3334fc90',
-        'format' : 'iframe',
-        'height' : 300,
-        'width' : 160,
-        'params' : {}
-      };
-    `;
-
+    // Create script element for banner ad
     const adScript = document.createElement('script');
-    adScript.type = 'text/javascript';
-    adScript.src = '//www.highperformanceformat.com/221cb822c978e0f9b51f9b5e3334fc90/invoke.js';
+    adScript.async = true;
+    adScript.setAttribute('data-cfasync', 'false');
+    adScript.src = '//pl26843440.profitableratecpm.com/c58e8b4e2234d91a115a9b3ddbbabb13/invoke.js';
 
-    // Append scripts to the ad container
+    // Create container div
+    const adContainer = document.createElement('div');
+    adContainer.id = 'container-c58e8b4e2234d91a115a9b3ddbbabb13';
+
+    // Append elements to the ad container
     if (adRef.current) {
-      adRef.current.appendChild(configScript);
       adRef.current.appendChild(adScript);
+      adRef.current.appendChild(adContainer);
     }
 
     return () => {
-      // Cleanup scripts when component unmounts
+      // Cleanup when component unmounts
       if (adRef.current) {
         adRef.current.innerHTML = '';
       }

@@ -15,7 +15,7 @@ const HeroSection = () => {
           {/* Left Content */}
           <div className="flex-1 text-center lg:text-left space-y-8">
             <div className="space-y-4 animate-fade-in-up">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-heading font-bold leading-tight">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-heading font-bold leading-tight">
                 <span className="text-gradient">BUILD AI STARTUP</span>
                 <br />
                 <span className="text-white">COMPANY IN</span>
@@ -23,7 +23,7 @@ const HeroSection = () => {
                 <span className="text-ai-orange">2025</span>
               </h1>
               
-              <div className="inline-block bg-gradient-to-r from-ai-green to-ai-cyan text-white px-6 py-3 rounded-full font-bold text-lg md:text-xl animate-pulse-glow">
+              <div className="inline-block bg-gradient-to-r from-ai-green to-ai-cyan text-white px-4 py-2 rounded-full font-bold text-base md:text-lg animate-pulse-glow">
                 FREE FOR 3 DAYS
               </div>
             </div>
@@ -53,12 +53,12 @@ const HeroSection = () => {
           {/* Right Content - Course Poster */}
           <div className="flex-1 flex justify-center lg:justify-end">
             <div className="relative animate-float">
-              <div className="absolute inset-0 bg-gradient-to-r from-ai-cyan to-ai-purple rounded-3xl blur-3xl opacity-30 animate-pulse"></div>
-              <div className="relative bg-gradient-to-br from-ai-blue to-ai-purple p-1 rounded-3xl">
+              <div className="absolute inset-0 bg-gradient-to-r from-ai-cyan to-ai-purple rounded-2xl blur-2xl opacity-30 animate-pulse"></div>
+              <div className="relative bg-gradient-to-br from-ai-blue to-ai-purple p-1 rounded-2xl">
                 <img 
                   src="/lovable-uploads/78c037ee-1921-4209-9a93-d233ec90f456.png"
                   alt="AI Startup Course Poster"
-                  className="w-full max-w-md rounded-2xl shadow-2xl hover-lift"
+                  className="w-full max-w-xs md:max-w-sm rounded-xl shadow-xl hover-lift"
                 />
               </div>
             </div>

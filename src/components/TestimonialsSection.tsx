@@ -57,21 +57,21 @@ const TestimonialsSection = () => {
       <div className="container mx-auto max-w-6xl">
         
         {/* Section Header */}
-        <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="text-4xl md:text-5xl font-heading font-bold text-white mb-6">
+        <div className="text-center mb-12 animate-fade-in-up">
+          <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
             Success Stories from <span className="text-gradient">Pakistani Entrepreneurs</span>
           </h2>
-          <p className="text-xl text-gray-300 max-w-3xl mx-auto">
+          <p className="text-lg text-gray-300 max-w-2xl mx-auto">
             Join thousands of successful Pakistani entrepreneurs who transformed their AI ideas into thriving businesses
           </p>
         </div>
         
         {/* Testimonials Grid */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 mb-16">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
           {testimonials.map((testimonial, index) => (
             <div 
               key={index}
-              className="glass-effect rounded-2xl p-6 hover-lift animate-fade-in-up"
+              className="glass-effect rounded-xl p-4 hover-lift animate-fade-in-up"
               style={{animationDelay: `${index * 0.1}s`}}
             >
               {/* Rating */}

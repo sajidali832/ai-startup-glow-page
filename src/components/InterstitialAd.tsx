@@ -5,9 +5,11 @@ interface InterstitialAdProps {
   isOpen: boolean;
   onClose: () => void;
   onComplete: () => void;
+  adsViewed: number;
+  requiredAds: number;
 }
 
-const InterstitialAd = ({ isOpen, onClose, onComplete }: InterstitialAdProps) => {
+const InterstitialAd = ({ isOpen, onClose, onComplete, adsViewed, requiredAds }: InterstitialAdProps) => {
   const [showCloseButton, setShowCloseButton] = useState(false);
   const adRef = useRef<HTMLDivElement>(null);
 
@@ -52,8 +54,13 @@ const InterstitialAd = ({ isOpen, onClose, onComplete }: InterstitialAdProps) =>
   }, [isOpen]);
 
   const handleClose = () => {
-    onClose();
-    onComplete();
+    if (adsViewed + 1 >= requiredAds) {
+      // User has viewed enough ads, give access
+      onComplete();
+    } else {
+      // Close current ad but don't give access yet
+      onClose();
+    }
   };
 
   if (!isOpen) return null;
@@ -75,7 +82,10 @@ const InterstitialAd = ({ isOpen, onClose, onComplete }: InterstitialAdProps) =>
             Please wait for the ad to complete
           </h3>
           <p className="text-gray-600">
-            Your free course access will be available after this ad
+            Your free course access will be available after viewing {requiredAds} ads
+          </p>
+          <p className="text-sm text-gray-500 mt-1">
+            Ad {adsViewed + 1} of {requiredAds}
           </p>
         </div>
 
@@ -89,7 +99,7 @@ const InterstitialAd = ({ isOpen, onClose, onComplete }: InterstitialAdProps) =>
               onClick={handleClose}
               className="bg-gradient-to-r from-ai-green to-ai-cyan text-white font-bold py-3 px-6 rounded-xl hover:scale-105 transition-all duration-300"
             >
-              Continue to Free Course
+              {adsViewed + 1 >= requiredAds ? 'Continue to Free Course' : `Continue (${adsViewed + 1}/${requiredAds})`}
             </button>
           </div>
         )}
