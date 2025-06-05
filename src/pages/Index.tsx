@@ -2,6 +2,7 @@ import HeroSection from '../components/HeroSection';
 import PricingSection from '../components/PricingSection';
 import CourseModules from '../components/CourseModules';
 import SocialBarAd from '../components/SocialBarAd';
+import ContainerAd from '../components/ContainerAd';
 import StickyBuyButton from '../components/StickyBuyButton';
 import Footer from '../components/Footer';
 import SuccessMessage from '../components/SuccessMessage';
@@ -21,6 +22,8 @@ const Index = () => {
       {/* Course Modules */}
       <CourseModules />
       
+      {/* Container Ad */}
+      <ContainerAd className="py-4" />
       
       {/* Footer */}
       <Footer />
