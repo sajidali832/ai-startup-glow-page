@@ -1,7 +1,7 @@
 import HeroSection from '../components/HeroSection';
 import PricingSection from '../components/PricingSection';
 import CourseModules from '../components/CourseModules';
-import TestimonialsSection from '../components/TestimonialsSection';
+
 import StickyBuyButton from '../components/StickyBuyButton';
 import Footer from '../components/Footer';
 import SuccessMessage from '../components/SuccessMessage';
@@ -18,8 +18,6 @@ const Index = () => {
       {/* Course Modules */}
       <CourseModules />
       
-      {/* Testimonials */}
-      <TestimonialsSection />
       
       {/* Footer */}
       <Footer />

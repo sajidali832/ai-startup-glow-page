@@ -1,48 +1,34 @@
-import { Book, Clock, CheckCircle } from 'lucide-react';
+import { CheckCircle } from 'lucide-react';
 
 const CourseModules = () => {
   const modules = [
     {
       title: "AI Market Analysis & Opportunity Identification",
-      description: "Discover untapped AI markets and validate your startup ideas",
-      duration: "2 hours",
-      lessons: 12
+      description: "Discover untapped AI markets and validate your startup ideas"
     },
     {
       title: "Building Your AI MVP",
-      description: "Step-by-step guide to creating your minimum viable AI product",
-      duration: "3 hours", 
-      lessons: 18
+      description: "Step-by-step guide to creating your minimum viable AI product"
     },
     {
       title: "Fundraising for AI Startups",
-      description: "Master the art of pitching to investors and securing funding",
-      duration: "2.5 hours",
-      lessons: 15
+      description: "Master the art of pitching to investors and securing funding"
     },
     {
       title: "Scaling & Growth Strategies",
-      description: "Learn how to scale your AI startup from MVP to market leader",
-      duration: "3 hours",
-      lessons: 20
+      description: "Learn how to scale your AI startup from MVP to market leader"
     },
     {
       title: "Legal & Ethical Considerations",
-      description: "Navigate AI regulations, data privacy, and ethical frameworks",
-      duration: "1.5 hours",
-      lessons: 10
+      description: "Navigate AI regulations, data privacy, and ethical frameworks"
     },
     {
       title: "Launch & Marketing Your AI Startup",
-      description: "Proven marketing strategies specific to AI startups",
-      duration: "2.5 hours",
-      lessons: 16
+      description: "Proven marketing strategies specific to AI startups"
     },
     {
       title: "Building Your AI Team",
-      description: "Recruit, manage, and scale your AI development team",
-      duration: "2 hours",
-      lessons: 14
+      description: "Recruit, manage, and scale your AI development team"
     }
   ];
 
@@ -86,31 +72,19 @@ const CourseModules = () => {
                 {module.description}
               </p>
               
-              {/* Module Stats */}
-              <div className="flex items-center justify-between text-sm text-ai-cyan">
-                <div className="flex items-center space-x-2">
-                  <Clock className="w-4 h-4" />
-                  <span>{module.duration}</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <Book className="w-4 h-4" />
-                  <span>{module.lessons} lessons</span>
-                </div>
-              </div>
             </div>
           ))}
         </div>
         
         {/* Course Stats */}
-        <div className="mt-16 grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
+        <div className="mt-16 grid grid-cols-2 md:grid-cols-3 gap-6 text-center">
           {[
-            { number: "15+", label: "Hours of Content" },
-            { number: "105", label: "Video Lessons" },
-            { number: "50+", label: "Resources & Templates" },
+            { number: "Complete", label: "AI Startup Guide" },
+            { number: "Free", label: "For 3 Days" },
             { number: "∞", label: "Lifetime Access" }
           ].map((stat, index) => (
             <div key={index} className="space-y-2">
-              <div className="text-3xl md:text-4xl font-bold text-gradient">
+              <div className="text-2xl md:text-3xl font-bold text-gradient">
                 {stat.number}
               </div>
               <div className="text-gray-300 text-sm">
