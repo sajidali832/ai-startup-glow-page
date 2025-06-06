@@ -3,48 +3,48 @@ import { Star } from 'lucide-react';
 const TestimonialsSection = () => {
   const testimonials = [
     {
-      name: "Abid Khan",
-      location: "Karachi",
+      name: "Alex M.",
+      location: "Tech Hub",
       avatar: "👨🏻‍💼",
-      review: "Excellent course! Helped me launch my AI chatbot startup in Karachi. The practical frameworks are pure gold. Highly recommended!",
+      review: "Excellent course! Helped me launch my AI chatbot startup. The practical frameworks are pure gold. Highly recommended!",
       rating: 5,
       business: "AI Chatbot Startup"
     },
     {
-      name: "Abdullah Ahmed", 
-      location: "Islamabad",
+      name: "Jordan R.", 
+      location: "Innovation City",
       avatar: "👨🏽‍💻",
       review: "The funding strategies module was game-changing. Now I understand exactly how to pitch to investors. Got my first round within 3 months!",
       rating: 5,
       business: "AI Healthcare Platform"
     },
     {
-      name: "Zulfiqar Ali",
-      location: "Lahore", 
+      name: "Taylor K.",
+      location: "Silicon Valley", 
       avatar: "👨🏻‍🚀",
-      review: "From Lahore to Silicon Valley mindset! This course opened my eyes to global AI opportunities. My startup is now serving international clients.",
+      review: "This course opened my eyes to global AI opportunities. My startup is now serving international clients with cutting-edge solutions.",
       rating: 5,
       business: "AI Analytics Startup"
     },
     {
-      name: "Kabir Hassan",
-      location: "Rawalpindi",
+      name: "Morgan T.",
+      location: "Business District",
       avatar: "👨🏽‍💼", 
       review: "Practical advice that actually works. My AI startup got its first client within a month of completing the course. ROI was immediate!",
       rating: 5,
       business: "AI Automation Services"
     },
     {
-      name: "Fatima Sheikh",
-      location: "Karachi",
+      name: "Casey L.",
+      location: "Metro Area",
       avatar: "👩🏽‍💻",
-      review: "As a woman entrepreneur, this course gave me confidence to enter the AI space. The community support is incredible. Breaking barriers every day!",
+      review: "As an entrepreneur, this course gave me confidence to enter the AI space. The community support is incredible. Breaking barriers every day!",
       rating: 5,
       business: "AI EdTech Platform"
     },
     {
-      name: "Muhammad Tariq",
-      location: "Faisalabad",
+      name: "Riley D.",
+      location: "Enterprise Zone",
       avatar: "👨🏻‍💻",
       review: "Best investment I made for my career. The ROI strategies and business models section helped me generate 6-figure revenue in first year!",
       rating: 5,
@@ -59,10 +59,10 @@ const TestimonialsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-12 animate-fade-in-up">
           <h2 className="text-3xl md:text-4xl font-heading font-bold text-white mb-4">
-            Success Stories from <span className="text-gradient">Pakistani Entrepreneurs</span>
+            Success Stories from <span className="text-gradient">Global Entrepreneurs</span>
           </h2>
           <p className="text-lg text-gray-300 max-w-2xl mx-auto">
-            Join thousands of successful Pakistani entrepreneurs who transformed their AI ideas into thriving businesses
+            Join thousands of successful entrepreneurs who transformed their AI ideas into thriving businesses
           </p>
         </div>
         
@@ -107,7 +107,7 @@ const TestimonialsSection = () => {
             {[
               { number: "12,000+", label: "Students Enrolled" },
               { number: "2,500+", label: "Startups Launched" },
-              { number: "₨50M+", label: "Total Funding Raised" },
+              { number: "$50M+", label: "Total Funding Raised" },
               { number: "4.5★", label: "Average Rating" }
             ].map((stat, index) => (
               <div key={index} className="space-y-2">
@@ -130,7 +130,7 @@ const TestimonialsSection = () => {
               🏆 Top Rated Course
             </div>
             <div className="bg-ai-purple/20 text-ai-pink px-4 py-2 rounded-full text-sm font-semibold">
-              🇵🇰 Made for Pakistan
+              🌍 Global Community
             </div>
           </div>
         </div>

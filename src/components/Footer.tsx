@@ -20,7 +20,7 @@ const Footer = () => {
                 🏆 #1 AI Course
               </div>
               <div className="bg-ai-blue/20 text-ai-cyan px-3 py-1 rounded-full text-xs font-semibold">
-                🇵🇰 Pakistani Made
+                🌍 Global Platform
               </div>
             </div>
           </div>
@@ -44,11 +44,11 @@ const Footer = () => {
             <div className="space-y-3 text-sm text-gray-300">
               <div className="flex items-center space-x-2">
                 <span>📧</span>
-                <span>support@aistartup.pk</span>
+                <span>support@aistartup.com</span>
               </div>
               <div className="flex items-center space-x-2">
                 <span>📱</span>
-                <span>+92 300 1234567</span>
+                <span>+1 800 123 4567</span>
               </div>
               <div className="flex items-center space-x-2">
                 <span>💬</span>
@@ -83,8 +83,8 @@ const Footer = () => {
           </div>
           
           <div className="text-center md:text-right text-sm text-gray-400">
-            <p>© 2025 AI Startup Course by Mr. Sajid. Made with ❤️ in Pakistan</p>
-            <p className="text-ai-cyan text-xs mt-1">"Quality over money - Empowering entrepreneurs"</p>
+            <p>© 2025 AI Startup Course. Made with ❤️ for entrepreneurs worldwide</p>
+            <p className="text-ai-cyan text-xs mt-1">"Quality over money - Empowering entrepreneurs globally"</p>
             <div className="flex flex-wrap justify-center md:justify-end space-x-4 mt-2">
               <a href="#" className="hover:text-ai-cyan transition-colors">Privacy Policy</a>
               <a href="#" className="hover:text-ai-cyan transition-colors">Terms of Service</a>
@@ -100,7 +100,7 @@ const Footer = () => {
               Ready to Build Your AI Empire? 🚀
             </h3>
             <p className="text-gray-300 mb-6">
-              Join 12,000+ Pakistani entrepreneurs who are already building the future with AI. 
+              Join 12,000+ entrepreneurs who are already building the future with AI. 
               FREE for 3 days only - Share with others!
             </p>
             <a 
