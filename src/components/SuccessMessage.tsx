@@ -70,7 +70,7 @@ const SuccessMessage = () => {
               <div className="text-6xl">✅</div>
               <h2 className="text-2xl font-bold text-white">Already Accessed!</h2>
               <p className="text-ai-cyan">
-                You have already accessed this FREE course by Mr. Sajid. 
+                You have already accessed this FREE course. 
                 Share it with others so they can benefit too!
               </p>
             </div>

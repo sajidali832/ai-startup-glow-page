@@ -67,7 +67,7 @@ const PricingSection = () => {
             
             <div className="pt-8 space-y-8">
               {/* Course Title */}
-              <h2 className="text-2xl md:text-4xl font-heading font-bold text-white px-2">
+              <h2 className="text-xl md:text-4xl font-heading font-bold text-white px-2">
                 Build AI Startup Company in 2025
               </h2>
               
@@ -118,10 +118,9 @@ const PricingSection = () => {
               {/* Creator Information */}
               <div className="pt-6 border-t border-white/10 space-y-4">
                 <div className="text-center">
-                  <p className="text-ai-cyan mb-2 font-semibold">Created by Mr. Sajid</p>
                   <p className="text-gray-300 text-sm px-4">
-                    "Quality over money - I believe in empowering people with knowledge. 
-                    This course is my gift to aspiring entrepreneurs."
+                    "Quality over money - We believe in empowering people with knowledge. 
+                    This course is our gift to aspiring entrepreneurs."
                   </p>
                 </div>
                 
