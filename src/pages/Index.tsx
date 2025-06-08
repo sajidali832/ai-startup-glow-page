@@ -5,6 +5,7 @@ import TestimonialsSection from '../components/TestimonialsSection';
 import SocialBarAd from '../components/SocialBarAd';
 import ContainerAd from '../components/ContainerAd';
 import LargeDisplayAd from '../components/LargeDisplayAd';
+import AdsterraBannerAd from '../components/AdsterraBannerAd';
 import StickyBuyButton from '../components/StickyBuyButton';
 import Footer from '../components/Footer';
 import SuccessMessage from '../components/SuccessMessage';
@@ -26,6 +27,9 @@ const Index = () => {
       
       {/* Large Display Ad */}
       <LargeDisplayAd className="py-4" />
+      
+      {/* Adsterra Banner Ad */}
+      <AdsterraBannerAd className="py-4" />
       
       {/* Reviews */}
       <TestimonialsSection />
